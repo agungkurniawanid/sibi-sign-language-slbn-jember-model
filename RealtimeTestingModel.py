@@ -12,10 +12,10 @@ from Config import actions
 ACTIONS = actions
 COLORS = [(245,117,16), (117,245,16)] 
 
-THRESHOLD = 0.8 # Akurasi minimal 80%
+THRESHOLD = 0.85 # Akurasi minimal 80%
 
-MODEL_PATH = 'final_lstm_action.h5' 
-# MODEL_PATH = 'best_gesture_model.h5' 
+MODEL_PATH = 'model_best.keras' 
+
 if not os.path.exists(MODEL_PATH):
     print(f"❌ Error: Model '{MODEL_PATH}' tidak ditemukan!")
     exit()
