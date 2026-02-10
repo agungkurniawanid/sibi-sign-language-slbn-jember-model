@@ -2,7 +2,8 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
+from keras.utils import to_categorical
+
 
 # IMPOR CONFIG
 from Config import DATA_PATH, actions, no_sequences, sequence_length
