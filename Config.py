@@ -40,7 +40,7 @@ list_kata = np.array([
 ])
 
 # Untuk Collect, Testing dan Training
-actions = np.array(['Saya', 'Buah', 'Kuat', 'Agar', 'Makan', 'Sayur', 'Ibu', 'An','Sabar']);
+actions = np.array(['Saya', 'Buah', 'Kuat', 'Agar', 'Makan', 'Sayur', 'Ibu', 'An', 'Sabar', 'Siap']);
 
 
 # 3. Jumlah Video & Frame
