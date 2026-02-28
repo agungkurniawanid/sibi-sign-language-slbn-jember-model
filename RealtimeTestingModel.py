@@ -14,7 +14,7 @@ COLORS = [(245,117,16), (117,245,16)]
 
 THRESHOLD = 0.80 # Akurasi minimal 80%
 
-MODEL_PATH = 'model_final.h5' 
+MODEL_PATH = 'model_best.keras' 
 
 if not os.path.exists(MODEL_PATH):
     print(f"❌ Error: Model '{MODEL_PATH}' tidak ditemukan!")

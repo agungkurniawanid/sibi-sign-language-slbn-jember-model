@@ -23,7 +23,7 @@ from Config import DATA_PATH, actions, sequence_length
 # ===============================
 # 1. LOAD DATASET + AUGMENTASI CERDAS
 # ===============================
-print("🔄 Memuat dataset & Melakukan Augmentasi...")
+print("Memuat dataset & Melakukan Augmentasi...")
 
 label_map = {label: num for num, label in enumerate(actions)}
 sequences, labels = [], []
@@ -66,14 +66,14 @@ for action in actions:
             labels.append(label_map[action])
 
         except Exception as e:
-            print(f"⚠️ Skip {action}/{sequence}: {e}")
+            print(f"Skip {action}/{sequence}: {e}")
 
 X = np.array(sequences)
 y = to_categorical(labels, num_classes=len(actions))
 
-print(f"✅ Total Dataset (Original + Augmentasi): {X.shape}") 
+print(f"Total Dataset (Original + Augmentasi): {X.shape}") 
 # Ekspektasi: (3200, 30, 1662) jika sequence 30 frames
-print("🎯 Jumlah kelas:", len(actions))
+print("Jumlah kelas:", len(actions))
 
 # ===============================
 # 2. SPLIT DATA
@@ -166,7 +166,7 @@ reduce_lr = ReduceLROnPlateau(
 # ===============================
 # 5. TRAINING
 # ===============================
-print("\n🚀 Training model...")
+print("\n Training model...")
 
 # Batch size 16 atau 32 ideal untuk dataset kecil
 history = model.fit(
@@ -181,14 +181,14 @@ history = model.fit(
 # ===============================
 # 6. EVALUASI AKHIR
 # ===============================
-print("\n🧪 Evaluasi Test (Menggunakan model terbaik):")
+print("\nEvaluasi Test (Menggunakan model terbaik):")
 # Load model terbaik yang disimpan checkpoint
 best_model = tf.keras.models.load_model('model_best.keras')
 loss, acc = best_model.evaluate(X_test, y_test)
 
-print(f"🏆 Test Accuracy: {acc * 100:.2f}%")
-print(f"📉 Test Loss: {loss:.4f}")
+print(f"Test Accuracy: {acc * 100:.2f}%")
+print(f"Test Loss: {loss:.4f}")
 
 # Simpan final model (opsional, karena model_best.keras sudah yang terbaik)
 best_model.save("model_final.h5")
-print("💾 Model terbaik disimpan sebagai model_final.h5")
+print("Model terbaik disimpan sebagai model_final.h5")

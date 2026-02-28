@@ -1,5 +1,4 @@
 
 === FOR SAVE OUTPUT TERMINAL ===
-mkdir logs
-for /f %i in ('powershell -command "Get-Date -Format yyyy-MM-dd"') do python DeepSeekCodeTrainingModel10Classes.py > logs\%i_training_log.txt 2>&1
+for /f %i in ('powershell -command "Get-Date -Format yyyy-MM-dd"') do python GeminiCodeTrainingModel10Classes.py > TerminalTrainingModelLogs\Gemini\%i_training_log.txt 2>&1
 

@@ -4,10 +4,11 @@ import mediapipe as mp
 import tensorflow as tf
 import os
 import math
+from Config import actions
 
 # ==================== KONFIGURASI ====================
 # Pastikan urutan ACTIONS sama persis dengan saat training!
-ACTIONS = np.array(['Saya', 'Buah', 'Kuat', 'Agar', 'Makan', 'Sayur', 'Ibu', 'An'])
+ACTIONS = actions
 
 # Nama Model
 MODEL_PATH = 'model_best.keras' 
