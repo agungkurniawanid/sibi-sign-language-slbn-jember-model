@@ -1,0 +1,35 @@
+# =============================================================================
+# requirements.txt
+# Proyek: SIBI Sign Language - SLBN Jember Model
+# Python  : 3.10.x
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# Catatan versi:
+#   - numpy   harus < 2.0 agar kompatibel dengan TensorFlow 2.17 & mediapipe
+#   - keras   sudah termasuk di dalam paket tensorflow (tidak perlu install terpisah)
+#   - protobuf di-resolve otomatis oleh pip; di-pin untuk menghindari konflik
+#     antara tensorflow dan mediapipe
+# =============================================================================
+
+# --- Core numerics ---
+numpy==1.26.4
+
+# --- Computer Vision ---
+opencv-python==4.10.0.84
+
+# --- Pose / Hand landmark detection ---
+mediapipe==0.10.14
+
+# --- Deep Learning ---
+tensorflow==2.17.0
+
+# --- Data visualisation ---
+matplotlib==3.9.4
+
+# --- Machine Learning utilities ---
+scikit-learn==1.5.2
+
+# --- Protobuf (pinned untuk mencegah konflik mediapipe <-> tensorflow) ---
+protobuf==4.25.3

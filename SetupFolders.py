@@ -1,3 +1,32 @@
+# =============================================================================
+# SetupFolders.py
+# =============================================================================
+# Tujuan:
+#   Membuat struktur folder dataset secara otomatis sebelum proses pengumpulan
+#   data dimulai. Folder dibuat berdasarkan konfigurasi di Config.py dengan
+#   hierarki: DatasetSibiKeypoints / <NamaKata> / <NomorSequence>
+#
+#   Contoh hasil folder:
+#     DatasetSibiKeypoints/
+#       Saya/
+#         0/
+#         1/
+#         ...
+#         99/
+#       Buah/
+#         0/ ... 99/
+#
+# Cara Penggunaan:
+#   Jalankan file ini SEKALI sebelum memulai pengumpulan data:
+#   python SetupFolders.py
+#
+# Urutan Eksekusi dalam Proyek:
+#   1. Config.py        -> Atur konfigurasi
+#   2. SetupFolders.py  -> Buat struktur folder  <-- FILE INI
+#   3. (Collect Data)   -> Kumpulkan data keypoints
+#   4. Training         -> Latih model
+# =============================================================================
+
 import os
 # IMPOR DARI CONFIG (Agar data selalu sama)
 from Config import DATA_PATH, actions, no_sequences

@@ -1,3 +1,21 @@
+# =============================================================================
+# Config.py
+# =============================================================================
+# Tujuan:
+#   File konfigurasi pusat untuk seluruh proyek deteksi bahasa isyarat SIBI
+#   (Sistem Isyarat Bahasa Indonesia). Semua nilai konfigurasi global seperti
+#   path dataset, daftar kata/label, jumlah video, dan panjang sequence
+#   didefinisikan di sini agar konsisten di seluruh file proyek.
+#
+# Cara Penggunaan:
+#   Impor nilai yang dibutuhkan dari file ini di file lain, contoh:
+#   from Config import DATA_PATH, actions, no_sequences, sequence_length
+#
+# Catatan:
+#   Ubah nilai di file ini saja jika ingin mengubah konfigurasi global.
+#   Jangan mendefinisikan ulang nilai yang sama di file lain.
+# =============================================================================
+
 import os
 import numpy as np
 
@@ -40,7 +58,8 @@ list_kata = np.array([
 ])
 
 # Untuk Collect, Testing dan Training
-actions = np.array(['Saya', 'Buah', 'Kuat', 'Agar', 'Makan', 'Sayur', 'Ibu', 'An', 'Sabar', 'Siap']);
+actions = np.array(['Saya', 'Buah', 'Kuat', 'Agar', 'Makan', 'Sayur', 'Ibu', 'An', 'Sabar', 'Siap', 'Gelas', 'Obat']);
+# actions = np.array(['Saya', 'Makan', 'Obat']);
 
 
 # 3. Jumlah Video & Frame
@@ -48,4 +67,4 @@ actions = np.array(['Saya', 'Buah', 'Kuat', 'Agar', 'Makan', 'Sayur', 'Ibu', 'An
 no_sequences = 100  
 
 # 30 frame = 1 detik (jika webcam 30fps)
-sequence_length = 30
+sequence_length = 45

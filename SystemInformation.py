@@ -1,3 +1,24 @@
+# =============================================================================
+# SystemInformation.py
+# =============================================================================
+# Tujuan:
+#   Menampilkan informasi lengkap tentang spesifikasi sistem dan versi library
+#   yang terinstall. File ini berguna untuk debugging kompatibilitas environment
+#   sebelum menjalankan proses training maupun inferensi model.
+#
+#   Informasi yang ditampilkan:
+#     - OS, arsitektur, dan prosesor
+#     - Versi Python dan path executable
+#     - Status virtual environment
+#     - Versi NumPy, OpenCV, MediaPipe, TensorFlow
+#     - Ketersediaan GPU/CUDA untuk TensorFlow
+#     - Versi paket dari pip
+#
+# Cara Penggunaan:
+#   Jalankan file ini untuk memverifikasi environment sebelum mulai coding:
+#   python SystemInformation.py
+# =============================================================================
+
 import sys
 import platform
 import os
