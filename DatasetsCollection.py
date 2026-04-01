@@ -373,7 +373,7 @@ def main():
                 cv2.putText(image, f'SIAP: {countdown}', (220, 240),
                             cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), 4)
                 cv2.putText(image, f"Seq: {sequence}/{end_folder - 1} | [M] Mirror",
-                            (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200, 200, 200), 1)
+                            (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 1)
 
                 tampilkan_info_jarak(image, jarak_cm, y_offset=450)
                 tampilkan_mirror_status(image, mirror_on)
@@ -404,7 +404,7 @@ def main():
                 cv2.putText(
                     image,
                     f'{target_action} | Seq {sequence} | Frame {frame_num + 1}/{sequence_length}',
-                    (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 1)
+                    (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 0), 1)
 
                 tampilkan_info_jarak(image, jarak_cm, y_offset=450)
                 tampilkan_mirror_status(image, mirror_on)
